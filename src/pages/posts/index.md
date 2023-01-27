@@ -1,4 +1,5 @@
 ---
+tags: "Blog"
 ---
 <!-- # My First Blog Post
 
