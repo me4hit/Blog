@@ -1,16 +1,24 @@
 ---
-const { platform, username } = Astro.props;
-
-
+const { url, nameSocial, logohref } = Astro.props;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
-
-<style>
-  a {
+<style is:global>
+  .social-rectangle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
     text-decoration: none;
+    border-color: whitesmoke;
+    border: 1px solid;
   }
+  .social-rectangle img {
+    width: 35px;
+    height: 35px;
+  }
+
 </style>
+<div class="social-rectangle">
+  <a href={url}>{nameSocial}</a>
+  <img src={logohref} />
+</div>

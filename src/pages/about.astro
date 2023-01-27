@@ -1,8 +1,64 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
+import ContentAbout from "../pages/mdfile/about.md";
+import Social from "../components/Social.astro";
 ---
 
+<style>
+  .name, h4 {
+    text-align: center;
+    margin: 0;
+  }
+  .avatar-container {
+    display: flex;
+    justify-content: center;
+  }
+  .social-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .social-container a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  p {
+    font-size: 18px;
+  }
+</style>
 <BaseLayout>
+  <h3 class="name">Trong Nghia</h3>
+  <h4>Software Developer ( Go / Java / C# ) <br /><br /></h4>
+  <div class="avatar-container">
+    <img src="/avatar.png" class="avatar" />
+  </div>
+  <h3>About me</h3>
+  <p>
+    Hiện tại mình đang là lập trình viên aka thợ gõ phím tại <a
+      href="https://www.fpt-software.com/">FPT Software</a
+    >
+    <br /><br />
   
+
+    Về sở thích trong làm việc thì mình thích những cái mình chưa biết. Lúc rảnh
+    rỗi thì mình hay chơi game với bạn bè hoặc ngủ bù cho ngày hôm trước.
+    <br /><br />
+
+    À ngoài mấy cái ngôn ngữ backend phía trên thì mình cũng biết xí về Node vs mấy cái framework frontend như React, Astro .., chủ yếu là học để dùng khi cần tới thôi.
+  </p>
+  <h3>Contact</h3>
+  <div class="social-container">
+    <Social
+      url="https://github.com/me4hit"
+      nameSocial="Github"
+      logohref="/github.png"
+    />
+    <Social
+      url="https://www.linkedin.com/in/trantrongnghia10101999/"
+      nameSocial="Linked"
+      logohref="/linkedin.png"
+    />
+  </div>
 </BaseLayout>
