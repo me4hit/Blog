@@ -2,12 +2,15 @@
 import Navigation from "./Navigation.astro";
 import Hambuger from "./Hambuger.astro";
 import ThemeIcons from "./ThemeIcon.astro";
+import Logo from "./logo.astro";
 ---
 
 <header>
-  <nav>
-    <Hambuger />
-    <ThemeIcons />
+  <nav class="navigation">
+    <div class="logo">
+      <Logo />
+      <ThemeIcons />
+    </div>
     <Navigation />
   </nav>
 </header>
